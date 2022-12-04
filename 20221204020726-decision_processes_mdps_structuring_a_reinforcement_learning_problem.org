@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       decc8ecd-0a46-4934-8651-5aea06d1a913
+:END:
+#+title: Decision Processes (MDPs) - Structuring a Reinforcement Learning Problem
+
+**** Markov Decision Processes (MDPs) - Structuring a Reinforcement Learning Problem [[[https://www.youtube.com/watch?v=my207WNoeyA&t=18s][Youtube Video]]]:
+***** REFERnces:
+[[http://incompleteideas.net/book/RLbook2020.pdf][RL BOOK]]
+***** Content [Generated from the extracted subtitles and screenshots]
+- In this video, we're going to discuss Markov decision processes or mdps this topic will lay the bedrock for our understanding of reinforcement learning so let's get to it.
+- Markov decision processes give us a way to formalize sequential decision making this formalization is the basis for problems that are solved with reinforcement learning to kick things off.
+****** Components involved in an MDP :MDP:markov:decision:cumulative:trajectory:
+- In an MDP we have a decision maker called an agent that interacts with the environment that it's placed in these interactions occur sequentially over time.
+- At each time step the agent will get some representation of the environment State.
+- Given this representation that agent selects an action to take.
+- The environment is then transitioned into some new state and the agent is given a reward as a consequence of its previous action.
+
+- So to summarize, the components of an MDP includes:
+  1. The environment.
+  2. The agent.
+  3. All the possible states of the environment.
+  4. All the actions that the agent can take in the environment.
+  5. And all the rewards that the agent can receive from taking actions in the environment.
+
+- This process of:
+  1. selecting an action at a given state,
+  2. transitioning to a new state
+  3. and receiving a reward.
+
+,happens sequentially over and over again which creates something called a _trajectory_ that shows the sequence of state actions and rewards.
+
+- Throughout the process it's the agents goal to maximize the total amount of rewards that it receives from taking actions and given states of the environment.
+
+- This means that the agent wants to maximize not just the immediate reward but the _cumulative rewards_ that it will receive over time.
+****** Alright let's get a bit mathy and represent an MDP with mathematical notation :trajectory:
+
+- This will make things easier for us, going forward:
+ [[file:alright_let's_get_a_bit_mathy_and__represent_an_MDP_with_mathematical_notation/2022-11-04_20-00-09_screenshot76.png]]
+
+******* Illustrating Diagram         :diagram:agent:environment:reward:state:
+[[file:alright_let's_get_a_bit_mathy_and__represent_an_MDP_with_mathematical_notation/2022-11-04_20-08-55_screenshot77.png]]
+
+******* Transition probabilities                           :Transition:bayes:
+[[file:alright_let's_get_a_bit_mathy_and__represent_an_MDP_with_mathematical_notation/2022-11-04_20-46-52_screenshot79.png]]
+
